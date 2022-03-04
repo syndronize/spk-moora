@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\PenggunaController;
 use App\Http\Controllers\Backend\KriteriaController;
 use App\Http\Controllers\Backend\SubKriteriaController;
 use App\Http\Controllers\Backend\ProjectController;
+use App\Http\Controllers\Backend\ProsesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,11 +50,16 @@ Route::middleware(['sudah_login'])->group(function () {
 
     // sk
     Route::get('/sk',[SubKriteriaController::class, 'index'])->name('sk');
+    Route::get('/sk/cetak',[SubKriteriaController::class, 'cetak'])->name('sk.cetak');
     Route::get('/sk/create',[SubKriteriaController::class, 'create'])->name('sk.create');
     Route::post('/sk',[SubKriteriaController::class, 'store'])->name('sk.store');
     Route::get('/sk/{sk}',[SubKriteriaController::class, 'edit'])->name('sk.edit');
     Route::put('/sk/{sk}',[SubKriteriaController::class, 'update'])->name('sk.update');
     Route::get('/sk/delete/{sk}',[SubKriteriaController::class, 'destroy'])->name('sk.delete');
+
+    //Proses
+    Route::get('/proses','App\Http\Controllers\Backend\ProsesController@index')->name('proses');
+
 
 
 });

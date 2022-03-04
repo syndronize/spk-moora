@@ -1,13 +1,13 @@
 @extends('backend/layout/app')
 @section('content')
-<title>Admin Form - Mediatama Assets</title>
+<title>Admin Form - Solok Radjo</title>
 <br>
 <br>
 <div class="col-md-12">
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 align="middle" class="card-title">Admin Form - Mediatama Assets</h3>
+            <h3 align="middle" class="card-title">Admin Form - Solok Radjo</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->

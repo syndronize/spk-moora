@@ -1,6 +1,6 @@
 @extends('backend/layout/app')
 @section('content')
-<title>Kriteria Form - Mediatama Assets</title>
+<title>Kriteria Form - Solok Radjo</title>
 <br>
 <br>
 <div class="col-md-12">

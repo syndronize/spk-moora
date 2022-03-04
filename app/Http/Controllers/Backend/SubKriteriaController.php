@@ -8,6 +8,7 @@ use App\Models\PenggunaModel;
 use Illuminate\Support\Facades\Validator;
 use DB;
 use App\Models\SubKriteriaModel;
+use PDF;
 
 class SubKriteriaController extends Controller
 {
@@ -288,5 +289,14 @@ class SubKriteriaController extends Controller
         return redirect()
         ->route('sk')
         ->with('pesan','Data Berhasil Dihapus');
+    }
+
+    public function cetak(){
+        $sk =  DB::table('tb_sub_kriteria')
+        ->leftJoin('tb_pengguna','tb_pengguna.id_pengguna','=','tb_sub_kriteria.id_pengguna')
+        ->orderBy('id_sub_kriteria')
+        ->get();
+        $pdf = PDF::loadview('backend/pages/sk/cetak',compact('sk'))->setPaper('a4', 'landscape');
+        return $pdf->stream('subkriteria.pdf');
     }
 }

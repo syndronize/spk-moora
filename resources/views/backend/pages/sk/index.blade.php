@@ -22,6 +22,7 @@
             <!-- /.card-header -->
             <div class="card-body">
             <a href="{{route('sk.create', '0')}}" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Kriteria</a>
+            <a href="{{route('sk.cetak')}}" target="_blank" class="btn btn-success mb-2"><i class="fas fa-print"></i> Data Kriteria</a>  
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr align="center">
