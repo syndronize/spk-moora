@@ -64,7 +64,46 @@ class SubKriteriaController extends Controller
             $c57 = $row->c57_sub_kriteria;
             $c58 = $row->c58_sub_kriteria;
             $c59 = $row->c59_sub_kriteria;
-            
+
+            //update C1 Nama
+            $c1_nama = "Penuh";
+
+            //Update C2 Nama
+            if($c21==0.05){$c21_nama = "Memiliki";}else{$c21_nama = "Tidak Memiliki";}
+            if($c22==0.05){$c22_nama = "Memiliki";}else{$c22_nama = "Tidak Memiliki";}
+            if($c23==0.05){$c23_nama = "Memiliki";}else{$c23_nama = "Tidak Memiliki";}
+            if($c24==0.05){$c24_nama = "Memiliki";}else{$c24_nama = "Tidak Memiliki";}
+            if($c25==0.05){$c25_nama = "Memiliki";}else{$c25_nama = "Tidak Memiliki";}
+            if($c26==0.05){$c26_nama = "Memiliki";}else{$c26_nama = "Tidak Memiliki";}
+            if($c27==0.05){$c27_nama = "Memiliki";}else{$c27_nama = "Tidak Memiliki";}
+            if($c28==0.05){$c28_nama = "Memiliki";}else{$c28_nama = "Tidak Memiliki";}
+            if($c29==0.05){$c29_nama = "Memiliki";}else{$c29_nama = "Tidak Memiliki";}
+
+            //Update C3 Nama
+            if($c31==1.95){$c31_nama = "Memiliki";}else{$c31_nama = "Tidak Memiliki";}
+
+            //Update C4 Nama
+            if($c41==0.05){$c41_nama = "Memiliki";}else{$c41_nama = "Tidak Memiliki";}
+            if($c42==0.05){$c42_nama = "Memiliki";}else{$c42_nama = "Tidak Memiliki";}
+            if($c43==0.05){$c43_nama = "Memiliki";}else{$c43_nama = "Tidak Memiliki";}
+            if($c44==0.05){$c44_nama = "Memiliki";}else{$c44_nama = "Tidak Memiliki";}
+            if($c45==0.05){$c45_nama = "Memiliki";}else{$c45_nama = "Tidak Memiliki";}
+            if($c46==0.05){$c46_nama = "Memiliki";}else{$c46_nama = "Tidak Memiliki";}
+            if($c47==0.05){$c47_nama = "Memiliki";}else{$c47_nama = "Tidak Memiliki";}
+            if($c48==0.05){$c48_nama = "Memiliki";}else{$c48_nama = "Tidak Memiliki";}
+            if($c49==0.05){$c49_nama = "Memiliki";}else{$c49_nama = "Tidak Memiliki";}
+
+            //Update C5 Nama
+            if($c51==0.05){$c51_nama = "Memiliki";}else{$c51_nama = "Tidak Memiliki";}
+            if($c52==0.05){$c52_nama = "Memiliki";}else{$c52_nama = "Tidak Memiliki";}
+            if($c53==0.05){$c53_nama = "Memiliki";}else{$c53_nama = "Tidak Memiliki";}
+            if($c54==0.05){$c54_nama = "Memiliki";}else{$c54_nama = "Tidak Memiliki";}
+            if($c55==0.05){$c55_nama = "Memiliki";}else{$c55_nama = "Tidak Memiliki";}
+            if($c56==0.05){$c56_nama = "Memiliki";}else{$c56_nama = "Tidak Memiliki";}
+            if($c57==0.05){$c57_nama = "Memiliki";}else{$c57_nama = "Tidak Memiliki";}
+            if($c58==0.05){$c58_nama = "Memiliki";}else{$c58_nama = "Tidak Memiliki";}
+            if($c59==0.05){$c59_nama = "Memiliki";}else{$c59_nama = "Tidak Memiliki";}
+
             $nilaitotal1 = $c1+$c21+$c22+$c23+$c24+$c25+$c26+$c27+$c28+$c29+$c31+$c41+$c42+$c43+$c44+$c45+$c46+$c47+$c48+$c49+$c51+$c52+$c53+$c54+$c55+$c56+$c57+$c58+$c59;
             
             $total_c1 = $c1;
@@ -97,6 +136,35 @@ class SubKriteriaController extends Controller
             // dd($final);
             $save=DB::table('tb_sub_kriteria')->where('id_sub_kriteria', $row->id_sub_kriteria)
             ->update([
+                'c1_sub_kriteria_nama' => $c1_nama,
+                'c21_sub_kriteria_nama' => $c21_nama,
+                'c22_sub_kriteria_nama' => $c22_nama,
+                'c23_sub_kriteria_nama' => $c23_nama,
+                'c24_sub_kriteria_nama' => $c24_nama,
+                'c25_sub_kriteria_nama' => $c25_nama,
+                'c26_sub_kriteria_nama' => $c26_nama,
+                'c27_sub_kriteria_nama' => $c27_nama,
+                'c28_sub_kriteria_nama' => $c28_nama,
+                'c29_sub_kriteria_nama' => $c29_nama,
+                'c31_sub_kriteria_nama' => $c31_nama,
+                'c41_sub_kriteria_nama' => $c41_nama,
+                'c42_sub_kriteria_nama' => $c42_nama,
+                'c43_sub_kriteria_nama' => $c43_nama,
+                'c44_sub_kriteria_nama' => $c44_nama,
+                'c45_sub_kriteria_nama' => $c45_nama,
+                'c46_sub_kriteria_nama' => $c46_nama,
+                'c47_sub_kriteria_nama' => $c47_nama,
+                'c48_sub_kriteria_nama' => $c48_nama,
+                'c49_sub_kriteria_nama' => $c49_nama,
+                'c51_sub_kriteria_nama' => $c51_nama,
+                'c52_sub_kriteria_nama' => $c52_nama,
+                'c53_sub_kriteria_nama' => $c53_nama,
+                'c54_sub_kriteria_nama' => $c54_nama,
+                'c55_sub_kriteria_nama' => $c55_nama,
+                'c56_sub_kriteria_nama' => $c56_nama,
+                'c57_sub_kriteria_nama' => $c57_nama,
+                'c58_sub_kriteria_nama' => $c58_nama,
+                'c59_sub_kriteria_nama' => $c59_nama,
                 'nilaitotal_sub_kriteria' =>$nilaitotal1,
                 'pangkat_c1' =>$pangkat_c1,
                 'pangkat_c2' =>$pangkat_c2,

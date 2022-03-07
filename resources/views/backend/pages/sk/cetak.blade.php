@@ -85,35 +85,35 @@
                 <tr align="center">
                     <td>{{$no + 1}}</td>
                     <td>{{$sk->nama_pengguna}}</td>
-                    <td>{{$sk->c1_sub_kriteria}}</td>
-                    <td>{{$sk->c21_sub_kriteria}}</td>
-                    <td>{{$sk->c22_sub_kriteria}}</td>
-                    <td>{{$sk->c23_sub_kriteria}}</td>
-                    <td>{{$sk->c24_sub_kriteria}}</td>
-                    <td>{{$sk->c25_sub_kriteria}}</td>
-                    <td>{{$sk->c26_sub_kriteria}}</td>
-                    <td>{{$sk->c27_sub_kriteria}}</td>
-                    <td>{{$sk->c28_sub_kriteria}}</td>
-                    <td>{{$sk->c29_sub_kriteria}}</td>
-                    <td>{{$sk->c31_sub_kriteria}}</td>
-                    <td>{{$sk->c41_sub_kriteria}}</td>
-                    <td>{{$sk->c42_sub_kriteria}}</td>
-                    <td>{{$sk->c43_sub_kriteria}}</td>
-                    <td>{{$sk->c44_sub_kriteria}}</td>
-                    <td>{{$sk->c45_sub_kriteria}}</td>
-                    <td>{{$sk->c46_sub_kriteria}}</td>
-                    <td>{{$sk->c47_sub_kriteria}}</td>
-                    <td>{{$sk->c48_sub_kriteria}}</td>
-                    <td>{{$sk->c49_sub_kriteria}}</td>
-                    <td>{{$sk->c51_sub_kriteria}}</td>
-                    <td>{{$sk->c52_sub_kriteria}}</td>
-                    <td>{{$sk->c53_sub_kriteria}}</td>
-                    <td>{{$sk->c54_sub_kriteria}}</td>
-                    <td>{{$sk->c55_sub_kriteria}}</td>
-                    <td>{{$sk->c56_sub_kriteria}}</td>
-                    <td>{{$sk->c57_sub_kriteria}}</td>
-                    <td>{{$sk->c58_sub_kriteria}}</td>
-                    <td>{{$sk->c59_sub_kriteria}}</td>
+                    <td>{{$sk->c1_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c21_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c22_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c23_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c24_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c25_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c26_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c27_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c28_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c29_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c31_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c41_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c42_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c43_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c44_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c45_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c46_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c47_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c48_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c49_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c51_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c52_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c53_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c54_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c55_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c56_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c57_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c58_sub_kriteria_nama}}</td>
+                    <td>{{$sk->c59_sub_kriteria_nama}}</td>
                 </tr>
             @endforeach
 			</tbody>

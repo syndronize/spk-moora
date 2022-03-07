@@ -21,7 +21,9 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+                @if(session()->get('level_pengguna') == 'Admin')
             <a href="{{route('pengguna.create', '0')}}" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Add Admin</a>
+                @endif
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr align="center">
@@ -31,7 +33,9 @@
                             <th>Phone Number</th>
                             <th>Gender</th>
                             <th>User Level</th>
+                            @if(session()->get('level_pengguna') == 'Admin')
                             <th>Aksi</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
@@ -43,11 +47,13 @@
                                 <td><a href="http://wa.me/{{$pengguna->nohp_pengguna}}" class="fas fa-phone" target="#">  {{$pengguna->nohp_pengguna}}</td>
                                 <td>{{$pengguna->jk_pengguna}}</td>
                                 <td>{{$pengguna->level_pengguna}}</td>
+                                @if(session()->get('level_pengguna') == 'Admin')
                                 <td>
                                     <a href="{{ route('pengguna.edit', $pengguna->id_pengguna) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
                                     <a onclick="return confirm('Are You Sure ?')" href="{{ route('pengguna.delete', $pengguna->id_pengguna) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                                     <!-- <button type="button" class="btn btn-danger btn-sm" onclick="mHapus('{{ route('pengguna.delete', $pengguna->id_pengguna) }}')"><i class="fa fa-trash"></i></button> -->
                                 </td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>

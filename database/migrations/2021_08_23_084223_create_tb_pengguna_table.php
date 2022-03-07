@@ -20,7 +20,7 @@ class CreateTbPenggunaTable extends Migration
             $table->string('username_pengguna')->unique();
             $table->string('nohp_pengguna');
             $table->enum('jk_pengguna',['Male','Female']);
-            $table->enum('level_pengguna',['Admin','User']);
+            $table->enum('level_pengguna',['Admin','User','Pimpinan']);
             $table->string('password_pengguna');
             $table->float('nilai_kriteria_pengguna')->nullable();
             $table->timestamps();

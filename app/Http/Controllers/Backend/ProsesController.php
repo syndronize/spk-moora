@@ -13,7 +13,12 @@ class ProsesController extends Controller
         ->leftJoin('tb_pengguna','tb_pengguna.id_pengguna','=','tb_sub_kriteria.id_pengguna')
         ->orderBy('id_sub_kriteria')
         ->get();
-        return view('backend/pages/proses/index',compact('proses'));
+
+        $proses1 = DB::table('tb_sub_kriteria')
+        ->leftJoin('tb_pengguna','tb_pengguna.id_pengguna','=','tb_sub_kriteria.id_pengguna')
+        ->orderBy('id_sub_kriteria')
+        ->get();
+        return view('backend/pages/proses/index',compact('proses','proses1'));
     }
 
 }

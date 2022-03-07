@@ -42,6 +42,7 @@
               </p>
             </a>
           </li>
+          @if(session()->get('level_pengguna') != 'User')
           <li class="nav-item">
             <a href="{{route('pengguna')}}" class="nav-link">
               <i class="nav-icon fas fa-user-graduate"></i>
@@ -50,6 +51,7 @@
               </p>
             </a>
           </li>
+          @endif
           <li class="nav-item">
             <a href="{{route('sk')}}" class="nav-link">
               <i class="nav-icon fas fa-tasks"></i>

@@ -39,6 +39,7 @@ class PenggunaController extends Controller
             if($cek == TRUE){
                 $request->session()->put("id_pengguna", $cek->id_pengguna);
                 $request->session()->put("nama_pengguna",$cek->nama_pengguna);
+                $request->session()->put("level_pengguna",$cek->level_pengguna);
                 return redirect()->route('home')->with('message','Selamat Datang');
             }else{
                 return back()->with('message','Silahkan Login Kembali');
@@ -75,6 +76,7 @@ class PenggunaController extends Controller
 
         $request->session()->forget('id_pengguna');
         $request->session()->forget('nama_pengguna');
+        $request->session()->forget('level_pengguna');
         $request->session()->flush();
         return redirect("/")->with('message','Sukses Logout.');
     }

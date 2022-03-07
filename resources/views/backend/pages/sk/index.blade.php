@@ -21,8 +21,12 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+            @if(session()->get('level_pengguna') != 'User')
+            @if(session()->get('level_pengguna') == 'Admin' )
             <a href="{{route('sk.create', '0')}}" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Kriteria</a>
+            @endif
             <a href="{{route('sk.cetak')}}" target="_blank" class="btn btn-success mb-2"><i class="fas fa-print"></i> Data Kriteria</a>  
+            @endif    
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr align="center">
@@ -95,8 +99,10 @@
                                 <td>{{$sk->c58_sub_kriteria}}</td>
                                 <td>{{$sk->c59_sub_kriteria}}</td>
                                 <td>
+                                    @if(session()->get('level_pengguna') == 'Admin')
                                     <a href="{{ route('sk.edit', $sk->id_sub_kriteria) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
                                     <a onclick="return confirm('Are You Sure ?')" href="{{ route('sk.delete', $sk->id_sub_kriteria) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                    @endif
                                     <!-- <button type="button" class="btn btn-danger btn-sm" onclick="mHapus('{{ route('sk.delete', $sk->id_sub_kriteria) }}')"><i class="fa fa-trash"></i></button> -->
                                 </td>
                             </tr>

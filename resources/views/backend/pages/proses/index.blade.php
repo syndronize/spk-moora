@@ -22,7 +22,35 @@
                 <h3 class="card-title">SPK Solok Radjo</h3>
             </div>
             <!-- /.card-header -->
-            
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr align="center">
+                        <th>No.</th>
+                        <th>Total Nilai C1</th>
+                        <th>Total Nilai C2</th>
+                        <th>Total Nilai C3</th>
+                        <th>Total Nilai C4</th>
+                        <th>Total Nilai C5</th>
+                        <th>Nilai Akhir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($proses1 as $no=>$proses1 )
+                        <tr align="center">
+                            <td>{{$no + 1}}</td>
+                            <td>{{$proses1->pangkat_c1}}</td>
+                            <td>{{$proses1->pangkat_c2}}</td>
+                            <td>{{$proses1->pangkat_c3}}</td>
+                            <td>{{$proses1->pangkat_c4}}</td>
+                            <td>{{$proses1->pangkat_c5}}</td>
+                            <td>{{$proses1->hasil_final_sub_kriteria}}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+
+            </table>
+            <br>
+            <br>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr align="center">
@@ -57,12 +85,6 @@
                         <th>Smoke</th>
                         <th>Pepper</th>
                         <th>Clove Like</th>
-                        <th>Total Nilai C1</th>
-                        <th>Total Nilai C2</th>
-                        <th>Total Nilai C3</th>
-                        <th>Total Nilai C4</th>
-                        <th>Total Nilai C5</th>
-                        <th>Nilai Akhir</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -99,18 +121,14 @@
                                 <td>{{$proses->c57_sub_kriteria}}</td>
                                 <td>{{$proses->c58_sub_kriteria}}</td>
                                 <td>{{$proses->c59_sub_kriteria}}</td>
-                                <td>{{$proses->pangkat_c1}}</td>
-                                <td>{{$proses->pangkat_c2}}</td>
-                                <td>{{$proses->pangkat_c3}}</td>
-                                <td>{{$proses->pangkat_c4}}</td>
-                                <td>{{$proses->pangkat_c5}}</td>
-                                <td>{{$proses->hasil_final_sub_kriteria}}</td>
+                                
                                 
                             </tr>
                         @endforeach
                 </tbody>
 
             </table>
+            
         </div>
         <!-- /.card-body -->
     </div>
@@ -118,4 +136,5 @@
     </div>
     <!-- /.container-fluid -->
 </section>
+
 @endsection

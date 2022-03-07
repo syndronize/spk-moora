@@ -21,7 +21,9 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+            @if(session()->get('level_pengguna') == 'Admin')   
             <a href="{{route('kriteria.create', '0')}}" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Kriteria</a>
+                @endif
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr align="center">
@@ -33,7 +35,9 @@
                             <th>Bobot Sub Kriteria</th>
                             <th>Jenis Sub Kriteria</th>
                             <th>Bobot Final Kriteria</th>
+                            @if(session()->get('level_pengguna') == 'Admin')
                             <th>Aksi</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
@@ -48,8 +52,10 @@
                                 <td>{{$kriteria->jenis_sk_kriteria}}</td>
                                 <td>{{$kriteria->bobot_final_kriteria}}</td>
                                 <td>
+                                    @if(session()->get('level_pengguna') == 'Admin')
                                     <a href="{{ route('kriteria.edit', $kriteria->id_kriteria) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
                                     <a onclick="return confirm('Are You Sure ?')" href="{{ route('kriteria.delete', $kriteria->id_kriteria) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                    @endif
                                     <!-- <button type="button" class="btn btn-danger btn-sm" onclick="mHapus('{{ route('kriteria.delete', $kriteria->id_kriteria) }}')"><i class="fa fa-trash"></i></button> -->
                                 </td>
                             </tr>
