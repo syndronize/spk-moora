@@ -21,7 +21,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-            @if(session()->get('level_pengguna') == 'Admin')   
+            @if(session()->get('level_pengguna') == 'Admin' )   
             <a href="{{route('kriteria.create', '0')}}" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Kriteria</a>
                 @endif
                 <table id="example1" class="table table-bordered table-striped">
